@@ -1,5 +1,8 @@
-import numpy as np
+# -*- coding: utf-8 -*-
+
 import itertools as it
+
+import numpy as np
 import kwant
 
 def within(distance):
