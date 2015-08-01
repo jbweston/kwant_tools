@@ -1,0 +1,5 @@
+Kwant tools
+===========
+
+A small set of utilities for use with the [Kwant](http://kwant-project.org/)
+package for quantum transport simulations.

@@ -1,0 +1,2 @@
+kwant==1.0.3
+numpy  # only need the most basic functionality, hence no version
