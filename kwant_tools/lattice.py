@@ -20,8 +20,12 @@ def within(distance):
     return lambda i, j: np.linalg.norm(j.pos - i.pos) < distance
 
 
-def connections(sites, connected, sym=kwant.builder.NoSymmetry()):
+def connections(sites, connected, sym=None):
     """Yield hoppings between sites which are connected.
+
+    Based on the work of Sergey Slizovskiy (see
+    http://comments.gmane.org/gmane.comp.science.kwant.user/442
+    for details).
 
     Parameters
     ----------
@@ -30,12 +34,15 @@ def connections(sites, connected, sym=kwant.builder.NoSymmetry()):
         Takes a pair of `kwant.builder.Site` and returns True if
         there is a connection between the sites. Must be symmetric
         with respect to its arguments.
-    sym : `kwant.builder.Symmetry` (default: `kwant.builder.NoSymmetry`)
-        A symmetry to apply to one of the sites in the pair before
-        checking for connectivity.
+    sym : function or `None` (default)
+        A symmetry group element to apply to one of the sites in
+        the pair before checking for connectivity. It is a function
+        which should take a `kwant.builder.Site` and return a
+        `kwant.Builder.Site`.
     """
     for i, j in it.product(sites, repeat=2):
-        j = sym(j)
+        if sym:
+            j = sym(j)
         if i == j:
             continue
         elif connected(i, j):
