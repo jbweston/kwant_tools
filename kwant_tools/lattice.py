@@ -10,7 +10,7 @@ def within(distance):
     
     Parameters
     ----------
-    distance: positive real
+    distance : positive real
 
     Returns
     -------
@@ -25,12 +25,12 @@ def connections(sites, connected, sym=kwant.builder.NoSymmetry()):
 
     Parameters
     ----------
-    sites: iterable of `kwant.builder.Site`
-    connected: function
+    sites : iterable of `kwant.builder.Site`
+    connected : function
         Takes a pair of `kwant.builder.Site` and returns True if
         there is a connection between the sites. Must be symmetric
         with respect to its arguments.
-    sym: `kwant.builder.Symmetry` (default: `kwant.builder.NoSymmetry`)
+    sym : `kwant.builder.Symmetry` (default: `kwant.builder.NoSymmetry`)
         A symmetry to apply to one of the sites in the pair before
         checking for connectivity.
     """
