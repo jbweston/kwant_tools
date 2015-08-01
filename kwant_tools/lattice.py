@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import functools as ft
 import itertools as it
 
 import numpy as np
@@ -47,3 +48,23 @@ def connections(sites, connected, sym=None):
             continue
         elif connected(i, j):
             yield i, j
+
+
+def group_element(symmetry, element):
+    """Return an element of a symmetry group.
+
+    Parameters
+    ----------
+    symmetry : `kwant.builder.Symmetry`
+        The symmetry group from which to take the element.
+    element : group element representation
+        A representation of the group element. Usually
+        (for `kwant.lattice.TranslationalSymmettry`) this
+        will be a sequence of integers.
+
+    Returns
+    -------
+    A function which can be applied to `kwant.builder.Site`
+    and which returns `kwant.builder.Site`.
+    """
+    return ft.partial(symmetry.act, element)
