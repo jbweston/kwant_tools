@@ -13,7 +13,25 @@ is that there are often common idioms that have to be implemented and
 re-implemented by the users themselves, because the concepts are not
 sufficiently general to be included in Kwant.
 
-`kwant_tools` aims to be a central place where small recipes and common
-functionality can be made available to the whole Kwant community.
-The idea is that people will contribute recipes that they find themselves
-using and re-using so that everyone can benefit from their work.
+`kwant_tools` is a set of utilities that I have personally found useful
+for working with Kwant, as such it is in no way meant to be "complete".
+That being said, anyone who finds it useful is free to use it under the
+conditions outlined in the LICENSE file.
+
+Contents
+========
+
++ **lattice.py**: utilities for working with Kwant lattices. Includes
+  functions for connecting sites in a system from arbitrary lattices
+  subject to some criterion, and some functionality for more easily
+  working with symmetries
+
++ **spin.py**: utilities for working with spin as an internal degree
+  of freedom (i.e. matrix onsite/hoppings, as opposed to separate
+  lattices)
+
+
+Contributing
+------------
+I'd be happy to accept pull/merge requests if anyone else has any tools
+they'd like to add to this collection.
