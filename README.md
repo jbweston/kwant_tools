@@ -16,7 +16,7 @@ sufficiently general to be included in Kwant.
 `kwant_tools` is a set of utilities that I have personally found useful
 for working with Kwant, as such it is in no way meant to be "complete".
 That being said, anyone who finds it useful is free to use it under the
-conditions outlined in the LICENSE file.
+MIT licence, the conditions of which are stated in the LICENSE file.
 
 Contents
 ========
