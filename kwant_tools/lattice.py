@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"""Utilities for working with Kwant lattices."""
 
 import functools as ft
 import itertools as it

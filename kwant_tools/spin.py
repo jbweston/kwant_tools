@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"""Utilities for working with spin as an internal degree of freedom."""
 
 import numpy as np
 
