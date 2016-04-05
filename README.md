@@ -17,6 +17,8 @@ sufficiently general to be included in Kwant.
 for working with Kwant, as such it is in no way meant to be "complete".
 That being said, anyone who finds it useful is free to use it under the
 MIT licence, the conditions of which are stated in the LICENSE file.
+The ``wraparound`` module was written by Christoph Groth, and is under
+the Kwant 2-clause BSD license
 
 Contents
 ========
@@ -24,11 +26,14 @@ Contents
 + **lattice.py**: utilities for working with Kwant lattices. Includes
   functions for connecting sites in a system from arbitrary lattices
   subject to some criterion, and some functionality for more easily
-  working with symmetries
+  working with symmetries.
 
 + **spin.py**: utilities for working with spin as an internal degree
   of freedom (i.e. matrix onsite/hoppings, as opposed to separate
-  lattices)
+  lattices).
+
++ **wraparound.py**: a utility to modify a Builder to allow for 2D
+  band structures to be calculated.
 
 
 Contributing
